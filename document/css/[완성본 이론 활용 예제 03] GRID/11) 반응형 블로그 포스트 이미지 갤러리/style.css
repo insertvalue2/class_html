@@ -1,0 +1,160 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  color: #222;
+  line-height: 1.6em;
+  background-color: #eee;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+/* Blog Post Grid Gallery */
+.container {
+  display: grid;
+  height: 100vh;
+  align-content: center;
+  margin: 0 15px;
+}
+.heading {
+  font-size: 42px;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 40px;
+  position: relative;
+  margin-bottom: 60px;
+}
+.heading:before {
+  content: '';
+  position: absolute;
+  background-color: cornflowerblue;
+  width: 150px;
+  height: 5px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 15px;
+}
+section div {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.focus {
+  /* grid-column: 1 / 3;
+  grid-row: 1 / 3; */
+  /* grid-column: span 2;
+  grid-row: span 2; */
+  grid-area: 1 / 1 / 3 / 3;
+  /* grid-area: 1 / 3 / 3 / 5; */
+}
+section div img {
+  width: 100%;
+  /* border-radius: 5px; */
+  display: block;
+}
+
+/* Hover Effects */
+section div a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+}
+section div:hover a:before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+section div .fa {
+  color: #fff;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.3s;
+}
+section div:hover .fa {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+section div span {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.5s;
+  opacity: 0;
+}
+section div:hover span {
+  bottom: 20px;
+  opacity: 1;
+}
+
+/* Mobile Layou 01 */
+/* @media (max-width: 767px) {
+  .container {
+    align-content: start;
+  }
+  section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .focus {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+} */
+
+/* Mobile Layou 02 */
+@media (max-width: 767px) {
+  .container {
+    align-content: start;
+  }
+  section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .focus {
+    grid-area: 1 / 1 / 3 / 3;
+  }
+}
+
+/* Tablet layout 01 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    align-content: start;
+  }
+  section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

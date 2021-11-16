@@ -1,0 +1,98 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  line-height: 1.6em;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-rows: 300px calc(100vh - 600px) 300px;
+}
+.project-gallery .items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 5px;
+}
+.project-gallery .items div {
+  /* border: 1px solid #000; */
+  height: 300px;
+}
+.project-gallery .story {
+  display: grid;
+  align-content: center;
+  padding: 20px;
+}
+.project-gallery .story h1 {}
+.project-gallery .story p {}
+
+/* Background Image */
+.items div {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.items.top div:nth-of-type(1) {
+  background-image: url(images/project-image-01.jpg);
+}
+.items.top div:nth-of-type(2) {
+  background-image: url(images/project-image-02.jpg);
+}
+.items.top div:nth-of-type(3) {
+  background-image: url(images/project-image-03.jpg);
+}
+.items.top div:nth-of-type(4) {
+  background-image: url(images/project-image-04.jpg);
+}
+.items.top div:nth-of-type(5) {
+  background-image: url(images/project-image-05.jpg);
+}
+
+.items.bottom div:nth-of-type(1) {
+  background-image: url(images/project-image-06.jpg);
+}
+.items.bottom div:nth-of-type(2) {
+  background-image: url(images/project-image-07.jpg);
+}
+.items.bottom div:nth-of-type(3) {
+  background-image: url(images/project-image-08.jpg);
+}
+.items.bottom div:nth-of-type(4) {
+  background-image: url(images/project-image-09.jpg);
+}
+.items.bottom div:nth-of-type(5) {
+  background-image: url(images/project-image-10.jpg);
+}
+
+/* Mobile CSS */
+@media (max-width: 767px) {
+  .project-gallery {
+    grid-template-rows: repeat(3, auto);
+  }
+  .project-gallery .story {
+    grid-row: 1;
+  }
+  .project-gallery .story h1 {
+    font-size: 19px;
+    letter-spacing: -1px;
+  }
+}
+
+/* Tablet CSS */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .project-gallery {
+    grid-template-rows: repeat(3, auto);
+  }
+  .project-gallery .items {
+    grid-template-columns: repeat(5, auto);
+    margin-top: 5px;
+  }
+  .project-gallery .items div {
+    height: 150px;
+  }
+  .project-gallery .story {
+    grid-row: 1;
+  }
+}

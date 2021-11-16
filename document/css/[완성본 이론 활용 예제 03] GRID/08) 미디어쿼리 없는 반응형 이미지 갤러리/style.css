@@ -1,0 +1,24 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+.face-gallery {
+  display: grid;
+  /* grid-template-columns: repeat(6, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 5px;
+}
+.face-gallery img {
+  min-width: 100%;
+}
+
+
+
+
+
+
+
+
