@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Google Web Font */
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 250px 1fr 250px;
+            grid-template-rows: 100px 600px 1fr 100px;
+            grid-template-areas: 'header header header'
+                'welcome welcome welcome'
+                'banner main aside'
+                'footer footer footer';
+        }
+
+        .container>div {
+            border: 1px solid #000;
+            padding: 20px;
+            font-size: 20px;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: DarkKhaki;
+        }
+
+        .welcome {
+            grid-area: welcome;
+            background: url(../../images/welcome-image.jpg) no-repeat center center;
+            background-size: cover;
+        }
+
+        .banner {
+            grid-area: banner;
+        }
+
+        .main {
+            grid-area: main;
+            justify-items: start !important;
+        }
+
+        .aside {
+            grid-area: aside;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: DarkKhaki;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-areas: 'header''welcome''banner''main''aside''footer';
+                grid-template-rows: 100px 600px 100px 1fr 100px 100px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="welcome">welcome</div>
+        <div class="banner">banner</div>
+        <div class="main">
+            <h2>This is Main Content</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus in blanditiis, porro voluptas
+                maxime
+                suscipit enim? Perspiciatis reiciendis at quo vel aperiam voluptatem ducimus enim fuga, placeat dolores
+                architecto nemo ipsa nihil? Suscipit, assumenda sint repudiandae deleniti officia iure nisi corporis
+                est.
+                Accusamus voluptatibus earum quis blanditiis, eius aut laudantium eligendi delectus dolorum fugiat autem
+                accusantium repudiandae omnis nam, nihil velit iste laborum illum obcaecati deserunt explicabo numquam!
+                Sed
+                nam numquam enim rem accusamus. Consequuntur aliquid, accusamus veniam mollitia suscipit at molestias?
+                Nemo
+                repudiandae explicabo sed, error quibusdam distinctio veritatis ullam quis sequi accusamus inventore rem
+                laboriosam, placeat impedit neque. Omnis corrupti deserunt explicabo temporibus incidunt ipsa ipsam odio
+                delectus in quas animi beatae dolores suscipit aut molestiae dicta voluptatem ipsum quia molestias
+                officia,
+                quasi repellat. Nam reprehenderit quas dignissimos qui officiis alias corporis velit voluptates
+                architecto
+                veniam dolores quaerat blanditiis tempora nobis, modi nihil ducimus placeat enim excepturi
+                exercitationem
+                cum repudiandae ratione minima! Consectetur voluptatum, earum velit placeat minus officiis recusandae
+                corrupti quasi, odio sunt nemo soluta ullam accusantium deserunt cupiditate quaerat itaque nesciunt a
+                ad,
+                enim sint! Eum dolore eligendi cupiditate dolores? Ullam fugit excepturi aspernatur sed exercitationem,
+                fugiat id architecto sit est vero similique, corporis dolore quidem harum itaque a qui eum nulla esse.
+                Rem
+                voluptates, quis tenetur exercitationem beatae nisi error nihil praesentium. Rerum dignissimos
+                voluptates
+                nemo. Inventore adipisci voluptatibus perspiciatis corporis repudiandae voluptates illo fugit architecto
+                dolores rerum, eos laudantium consectetur nemo quos eligendi excepturi explicabo ipsum error iusto
+                voluptas.
+                Labore blanditiis accusamus nemo tempora consequatur at beatae iure rem, adipisci, suscipit nulla natus,
+                praesentium laudantium minus id vero magni est consectetur ipsum aperiam itaque voluptates. Eius
+                laudantium
+                in amet. Voluptate aliquid eum sapiente deleniti unde nulla ex architecto, numquam laudantium quis
+                ratione.
+                Enim in voluptate quibusdam ipsam possimus nemo earum dicta magni adipisci cumque.
+            </p>
+        </div>
+        <div class="aside">aside</div>
+        <div class="footer">footer</div>
+    </div>
+
+</body>
+
+</html>
