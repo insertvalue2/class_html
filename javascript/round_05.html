@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+            script 란 기생언이다. 
+            shell script란 운영체제에 기생언다
+            
+
+            javascrit 스크립트 언어라서 브라우저가 있어야 실행할 수 있는데 
+            (html)
+            
+
+            자바 스크립트도 브라우저 없이 실행할 수 없을까 해서 나온게 
+            node.js이다. (자바로 치면 jvm 실행환경 같은거라고 보면 된다.)
+        
+        */
+        function randomValue() {
+            let date = new Date();
+            let currnetSeconds = date.getSeconds();
+            let randomNumber = (currnetSeconds % 5) + 1;
+            alert("발생된난수 = " + randomNumber);
+        }
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <h2>alert 다이얼로그 실행</h2>
+    </div>
+    <!-- 
+        href="#"을 쓰는 경우들:
+        1. 클릭 이벤트 발생시 페이지 전환을 하지 않도록 하기 위해 쓰인다.
+        # + id 를 사용해서 같은 문서내의 해당 element로 이동하는 것이다. 
+        # 으로만 명시하면 클릭시 최상단으로 이동하게 관례라고 나와 있지만 
+        <a href="javascript:;" onlcick="func()">최상단</a>
+
+        2. 최상단으로 이동을 목적으로 #을 쓴다면 
+        wondow.scrooTo() 를 사용하는게 더 좋은 방식이다. 
+
+        3. #, #;(세미콜론)의 차이는 세미콜론이 붙으면 화면 최상단으로 이동하지 않는다는 점이다. 
+
+        4. #; 사용하는 경우 확인 
+     -->
+    <div style="width: 800; height: 1900px; border: 1px solid #000; background-color: antiquewhite;"></div>
+    <a href="#" onclick="randomValue()">누르면 난수 발생</a>
+    <br>
+    <a href="#">누르면 최상단이동</a>
+    <br>
+    <a href="javascript:window.scrollTo(0,0);">누르면 최상단이동2</a>
+    <br>
+    <a href="#;" onclick="javascript:alert('#; 활용방법');">링크에서 onclick 이벤트 생성 방법</a>
+
+</body>
+
+</html>

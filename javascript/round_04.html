@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = 5, b, c;  // 전역 변수 
+
+        function aaa() {
+            b = a + 5;
+            document.write("b = " + b + "<br/>");
+        }
+
+        function bbb() {
+            c = b + 5;
+            document.write("c = " + c + "<br/>");
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <h2>자바 스크립트 전역 변수와 함수</h2>
+    </div>
+
+    <script>
+        aaa();
+        bbb();
+    </script>
+</body>
+
+</html>

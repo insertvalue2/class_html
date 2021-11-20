@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function info() {
+            let jumin = prompt("주민번호 (xxxxxx-xxxxxxx) : ", "");
+            if (jumin.charAt(6) != "-") {
+                alert("주민번호 형식이 잘못 됨");
+            }
+
+            let b = jumin.charAt(7);
+            let d = "";
+            switch (b) {
+                case '1': d = "남성"; break;
+                case '2': d = "여성"; break;
+            }
+            alert("성별 : " + d);
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <a href="#;" onclick="info()">주민번호로 정보 구별하기</a>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드 minmax(최소값, 최대값)</title>
+    <style>
+        .parent {
+            border: 1px solid #333;
+            /* 부모요소 속성에 width 크기 값이 있을 경우 minmax 확인 !!! */
+            width: 700px;
+            padding: 10px;
+            background-color: #a29bef;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(250px, 1fr));
+            /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+            /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+            gap: 10px;
+            text-align: center;
+        }
+
+        .parent div {
+            padding: 10px;
+            background-color: aliceblue;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+
+</html>

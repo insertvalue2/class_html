@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // https://ko.javascript.info/intro
+
+        // https://velog.io/@ljinsk3/JavaScript-%EA%B8%B0%EC%B4%88-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC-1
+        // https://hianna.tistory.com/453
+        // https://velog.io/@haileyself/TIL-Javascript-%EA%B0%9D%EC%B2%B4Object
+        // http://blog.knowgari.com/immutability/
+
+
+        // console.log("출력값 : " + i);
+        function showGugudan(a) {
+            for (let i = 1; i <= 9; i++) {
+                document.write(a + " * " + i + " = " + (a * i) + "<br>");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <script>
+
+        let dan = prompt("구구단 몇단을 출력할까요?");
+        showGugudan(dan);
+
+    </script>
+</body>
+
+</html>

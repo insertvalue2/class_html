@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function inputData() {
+            let name = prompt("이름 = ", "홍길동");
+            let age = prompt("나이= ", 20);
+            document.write(name + "님 !" + "<br>");
+            document.write("당신의 만 " + (age - 1) + "세 입니다.");
+            alert(name + "님 당신의 만 나이는 " + (age - 1) + "세 입니다");
+        }
+    </script>
+</head>
+
+<body>
+
+    <a href="#;" onclick="inputData()">입력하기</a>
+</body>
+
+</html>

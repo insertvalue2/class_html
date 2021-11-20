@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            웹 브라우저의 HTML문서 렌더링 과정
+1. 불러오기 Loading)
+로더(Loader)가 서버로부터 전달 받는 리소스 스트림을 읽는 과정.
+읽으면서 어떤 파일인지, 데이터인지 파일을 다운로드할 것인지 등을 결정한다.
+2. 파싱(Parsing)
+웹 엔진이 가지고 있는 HTML/XML 파서가 문서를 파싱해서 DOM Tree를 만든다.
+2 -1 파싱(parse or parsing)이란?
+문서를 파싱한다는 것은 브라우저가 코드를 이해하고 사용할 수 있는 구조로 변환하는 것을 의미합니다.
+3. 렌더링 트리(Rendering Tree) 만들기
+DOM Tree는 내용을 저장하는 트리로 자바스크립트에서 접근하는 DOM객체를 쓸 때 이용하는 것이고 별도로 그리기 위한 트리가 만들어져야 하는데 그것이 렌더링 트리다. (그릴 때 필요없는 head, title, body태그등이 없음 + display:none 처럼 DOM에는 있지만 화면에서는 걸러내야할 것들을 걸러냄)
+4. CSS 스타일 결정
+CSS는 선택자에 따라서 적용되는 태그가 다르기 때문에 모든 CSS 스타일을 분석해 태그에 스타일 규칙이 적용되게 결정한다.
+5. 레이아웃 레이아웃(Layout) 
+렌더링 트리가 생성될 때  위치나 크기를 가지고 있지 않기 때문에 객체들에게 위치와 크기를 정해주는 과정을 레이아웃이라고 함.
+6.그리기(Painting)
+렌더링 트리를 탐색하면서 그리기.
+
+참고로 렌더링 엔진은 가능하면 HTML문서가 파싱될 때까지 기다리지 않고, 배치와 그리기 과정을 시작한다.
+
+
+CSS는 위에 Script는 아래에?
+https://jeong-pro.tistory.com/90
+
+
+
+인터프린트 언어란 
+https://ithub.tistory.com/86
+
+
+*/
+        h2 {
+            text-align: center;
+            margin: 100px;
+            border: 1px solid #000;
+        }
+
+    </style>
+</head>
+
+<body onload="javascript: alert('홈페이지에 오신 것을 환영합니다.')">
+    <div>
+        <h2>~ ~ 홈페이지 방문을 환영합니다.</h2>
+    </div>
+
+</body>
+
+</html>
