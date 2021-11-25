@@ -33,5 +33,7 @@ console.log(bigNumber1);
 console.log('-----------------------------')
 
 // 2. 문자형 
-
-
+let a = 10;
+let b = 1;
+let result = (a + b < 4) ? '미만' : '이상';
+console.log(result);
